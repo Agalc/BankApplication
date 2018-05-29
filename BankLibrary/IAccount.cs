@@ -9,6 +9,6 @@ namespace BankLibrary
     public interface IAccount
     {
         void Put(decimal val); //put money on a account
-        void Withdraw(decimal val);//withdraw money from account
+        decimal Withdraw(decimal val);//withdraw money from account
     }
 }
