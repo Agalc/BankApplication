@@ -75,7 +75,7 @@ namespace BankLibrary
         public virtual void Put(decimal val)
         {
             _val += val;
-            OnAdded(new AccountEventArgs("На счет поступило " + val,val));
+            OnAdded(new AccountEventArgs("На счет поступило " + val, val));
         }
         public virtual decimal Withdraw(decimal val)
         {
@@ -92,16 +92,16 @@ namespace BankLibrary
             }
             return result;
         }
-        //Account opening
+
         protected internal virtual void Open()
         {
             OnOpened(new AccountEventArgs("Открыт новый депозитный счет!Id счета: " + this._id, this._val));
-        }
-        //Account closing
+        }//Account opening
+
         protected internal virtual void Close()
         {
             OnClosed(new AccountEventArgs("Счет " + _id + " закрыт.  Итоговая сумма: " + CurrentVal, CurrentVal));
-        }
+        } //Account closing
 
         protected internal void IncrementDays()
         {
