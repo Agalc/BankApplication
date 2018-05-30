@@ -12,7 +12,7 @@ namespace BankLibrary
         Deposit
     }
 
-    class Bank<T> where T : Account
+    public class Bank<T> where T : Account
     {
         T[] accounts;
         public string Name { get; private set; }
